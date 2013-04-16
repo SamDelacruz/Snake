@@ -42,7 +42,13 @@ public class DebugRenderer implements Renderer {
 					
 					else{
 						if(arena.map[i][j] instanceof ArenaFruit){
+							renderer.end();
+							renderer.begin(ShapeType.Filled);
 							renderer.setColor(0,0,1,1);
+							renderer.rect(i, j, 1, 1);
+							renderer.end();
+							renderer.begin(ShapeType.Line);
+							renderer.setColor(0.5f, 0.5f, 1, 0.5f);
 							renderer.rect(i, j, 1, 1);
 							renderer.setColor(1,0,0,1);
 						}

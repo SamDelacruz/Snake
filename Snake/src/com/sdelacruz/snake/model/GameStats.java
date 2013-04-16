@@ -13,7 +13,7 @@ public class GameStats {
 	
 	public void update(float deltaTime){
 		stateTime += deltaTime;
-		scoreMultiplier = snake.speed;
+		setMultiplier(snake.speed);
 		if(stateTime >= 1/snake.speed){
 			score += scoreMultiplier;
 			score += scoreMultiplier * (snake.nodes.size);
@@ -25,8 +25,5 @@ public class GameStats {
 		this.scoreMultiplier = x;
 	}
 	
-	private void addFruit(int value){
-		score += score + (value * scoreMultiplier);
-	}
 	
 }

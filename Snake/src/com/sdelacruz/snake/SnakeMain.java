@@ -1,8 +1,6 @@
 package com.sdelacruz.snake;
 
 import com.badlogic.gdx.Game;
-import com.sdelacruz.snake.model.GameStats;
-import com.sdelacruz.snake.view.GameOverScreen;
 import com.sdelacruz.snake.view.GameScreen;
 
 public class SnakeMain extends Game {

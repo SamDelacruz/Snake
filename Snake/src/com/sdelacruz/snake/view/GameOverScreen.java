@@ -5,18 +5,18 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.sdelacruz.snake.SnakeMain;
 import com.sdelacruz.snake.model.GameStats;
-import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 public class GameOverScreen implements Screen {
 	
@@ -65,12 +65,15 @@ public class GameOverScreen implements Screen {
 		
 		
 		BitmapFont gameOverFont = new BitmapFont();
+		gameOverFont.getRegion().getTexture().setFilter(TextureFilter.Nearest, TextureFilter.Nearest);
 		gameOverFont.scale(2f);
 		
 		BitmapFont scoreFont = new BitmapFont();
+		scoreFont.getRegion().getTexture().setFilter(TextureFilter.Nearest, TextureFilter.Nearest);
 		scoreFont.scale(1.5f);
 		
 		BitmapFont buttonFont = new BitmapFont();
+		buttonFont.getRegion().getTexture().setFilter(TextureFilter.Nearest, TextureFilter.Nearest);
 		buttonFont.scale(2f);
 		
 		Label gameOverText = new Label("Game Over", new LabelStyle(gameOverFont, Color.WHITE));

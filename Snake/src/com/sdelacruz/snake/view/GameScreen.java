@@ -2,14 +2,10 @@ package com.sdelacruz.snake.view;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
-import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.input.GestureDetector;
-import com.badlogic.gdx.input.GestureDetector.GestureListener;
-import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.sdelacruz.snake.SnakeMain;
 import com.sdelacruz.snake.controller.CollisionHandler;
@@ -57,6 +53,7 @@ public class GameScreen implements Screen{
 		collisionHandler = new CollisionHandler(this.playerSnake, this.arena);
 		
 		renderers.add(new DebugRenderer(this.arena, this.playerSnake, cam));
+		renderers.add(new ScoreBarRenderer(this.gameStats, this.cam));
 	}
 
 

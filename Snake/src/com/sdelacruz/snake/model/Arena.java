@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Arena {
 
-	public final int WIDTH_IN_CELLS = 48;
+	public final int WIDTH_IN_CELLS = 32;
 	public final int HEIGHT_IN_CELLS = 32;
 	
 	private Random randomW = new Random();
